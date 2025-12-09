@@ -1,4 +1,4 @@
-# Project State after Lesson 4: MongoDB Essentials - Sharding
+# Project State after Lesson 5: MongoDB Essentials - Essential Tools
 
 ## Project Setup:
 - Node.js project initialized with `npm init -y`.
@@ -39,6 +39,15 @@
         - **Range Sharding**: Divides data into contiguous ranges based on the shard key, efficient for range queries, but can lead to hot spots.
         - **Compound Shard Key**: Uses multiple fields for sharding, allowing for more granular control and optimizing for specific query patterns.
     - **Considerations for Shard Key Selection**: Cardinality, query patterns, data distribution, avoiding monotonic keys.
+
+## Tools Covered in Lesson 5: Essential Setup
+
+- **MongoDB Atlas CLI**: Command-line interface for managing MongoDB Atlas cloud resources (clusters, users, network access).
+- **MongoDB Shell (mongosh)**: Interactive JavaScript interface for direct interaction with MongoDB databases, collections, and documents.
+- **Docker**: Platform for developing, shipping, and running applications in containers.
+    - **Container**: A lightweight, standalone, executable package of software that includes everything needed to run an application.
+    - **Image**: A read-only template with instructions for creating a Docker container.
+- **Homebrew (on macOS)**: A free and open-source software package management system that simplifies the installation of software on Apple's macOS.
 
 ## Next Steps:
 - Explore CRUD operations and data modeling in MongoDB.
