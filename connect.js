@@ -23,6 +23,15 @@ async function main() {
         const collectionName = 'books';
         const booksCollection = db.collection(collectionName);
         console.log(`Working with collection: ${booksCollection.collectionName}`);
+        // Check Replica Set status to see its members and current state
+        console.log('--- Checking Replica Set Status ---');
+        const adminDb = db.admin();
+        const replSetStatus = await adminDb.replSetGetStatus();
+        console.log('Replica Set Name:', replSetStatus.set);
+        console.log('My current role:', replSetStatus.myState);
+        console.log('Members:', replSetStatus.members.map(member => ({ name: member.name, stateStr: member.stateStr, health: member.health === 1 ? 'OK' : 'DOWN' })));
+        console.log('--- End Replica Set Status ---');
+
 
 
 
